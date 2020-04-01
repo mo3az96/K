@@ -1,0 +1,19 @@
+.sec-header {
+    font-size: 24px;
+    color: $text;
+    text-align: center;
+    font-family: med;
+    margin-bottom: 25px;
+
+    @include sm {
+        margin-bottom: 15px;
+    }
+}
+
+.banners {
+    margin-top: 47px;
+
+    @include sm {
+        margin-top: 35px;
+    }
+}

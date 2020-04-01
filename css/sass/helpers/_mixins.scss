@@ -1,0 +1,42 @@
+@mixin transition($transition...) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+
+// @include transition(all 0.3s ease-in-out);
+
+@mixin redgred {
+    background-image: -webkit-gradient(linear, left top, right top, from(#3f7a5a), color-stop(#5aad80), color-stop(#ec5f44), to(#ff7e6f));
+    background-image: -o-linear-gradient(left, #3f7a5a, #5aad80, #ec5f44, #ff7e6f);
+    background-image: linear-gradient(to right, #3f7a5a, #5aad80, #ec5f44, #ff7e6f);
+    // background-image: -webkit-gradient(linear, left top, right top, from(#ec5f44), color-stop(#ff7e6f), color-stop(#3f7a5a), to(#5aad80));
+    // background-image: -o-linear-gradient(left, #ec5f44, #ff7e6f, #3f7a5a, #5aad80);
+    // background-image: linear-gradient(to right, #ec5f44, #ff7e6f, #3f7a5a, #5aad80);
+    background-size: 300%;
+}
+
+@mixin lg {
+    @media (max-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media (max-width: 767px) {
+        @content;
+    }
+}

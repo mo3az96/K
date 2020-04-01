@@ -1,0 +1,200 @@
+.xs-icon {
+    display: none;
+
+    @include sm {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+    }
+}
+
+header {
+    .blue-div {
+        .lang {
+            @include sm {
+                position: absolute;
+                top: 25px;
+                right: 10px;
+                left: auto;
+                z-index: 99999;
+                margin: 0;
+                transform: scaleX(0);
+                transform-origin: right;
+                @include transition(all 0.4s ease-in-out);
+
+                #{$ltr} & {
+                    margin: 0;
+                    left: 10px;
+                    right: auto;
+                    transform-origin: left;
+                }
+
+                .lang-anchor {
+                    color: $black;
+                }
+
+                .lang-dropdown {
+                    right: -11px;
+
+                    #{$ltr} & {
+                        right: -19px;
+                    }
+                }
+
+                &.lang-in {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+}
+
+
+nav {
+    .close-btn {
+        font-size: 20px;
+        color: $wish;
+        position: absolute;
+        left: 25px;
+        top: 25px;
+        display: none;
+
+        #{$ltr} & {
+            left: auto;
+            right: 25px;
+        }
+    }
+
+    @include sm {
+        .close-btn {
+            display: flex;
+        }
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.302);
+        z-index: 999;
+        display: none;
+
+        .mo-navbar {
+            width: 280px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background-color: #fff;
+            min-height: 100vh;
+            flex-direction: column;
+            padding-top: 80px;
+            padding-right: 25px;
+            padding-bottom: 15px;
+            transform-origin: right;
+            transform: scaleX(0);
+            @include transition(all 0.5s ease-in-out);
+
+            #{$ltr} & {
+                transform-origin: left;
+                padding-right: 0;
+                padding-left: 25px;
+            }
+
+            &.nav-in {
+                transform: scaleX(1);
+            }
+        }
+
+        .cats-menu {
+            order: 2;
+            margin: 7px 0;
+            width: 100%;
+
+            #{$ltr} & {
+                margin: 7px 0;
+            }
+        }
+
+        .cats-btn {
+            height: auto;
+            width: auto;
+            background-color: transparent;
+            color: $text;
+            padding: 0;
+            padding-left: 25px;
+
+            #{$ltr} & {
+                padding: 0;
+                padding-right: 25px;
+            }
+
+            .text {
+                span {
+                    display: none;
+                }
+            }
+
+            &.open {
+                background-color: transparent;
+                color: $darkred;
+
+                &:after {
+                    content: "\e873";
+                }
+            }
+        }
+
+        .cats-dispaly {
+            position: static;
+            padding: 0;
+            padding-right: 15px;
+            width: auto;
+
+            #{$ltr} & {
+                padding: 0;
+                padding-left: 15px;
+            }
+        }
+
+        .cats-div {
+            box-shadow: none;
+            padding: 0;
+
+            li {
+                margin: 5px 0;
+                padding: 0;
+                border: none;
+            }
+        }
+
+        .nav-li {
+            margin: 7px 0;
+            width: 100%;
+            order: 4;
+
+            &:nth-of-type(2) {
+                order: 1;
+            }
+
+            &:nth-of-type(3) {
+                order: 2;
+            }
+        }
+
+        .cat-link {
+            color: $blue;
+
+            &:focus {
+                color: $darkred;
+            }
+        }
+
+        .nav-anchor {
+            color: $text;
+
+            &:focus {
+                color: $darkred;
+            }
+        }
+    }
+}

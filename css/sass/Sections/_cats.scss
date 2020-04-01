@@ -1,0 +1,92 @@
+.cats {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .cat {
+        width: calc(100% / 3 - 10px);
+        margin-left: 15px;
+        margin-bottom: 15px;
+        display: block;
+        overflow: hidden;
+        position: relative;
+
+        #{$ltr} & {
+            margin-left: 0;
+            margin-right: 15px;
+        }
+
+        &:nth-of-type(3n) {
+            margin-left: 0;
+
+            #{$ltr} & {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
+        img {
+            backface-visibility: hidden;
+            @include transition(all 0.3s ease-in-out);
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(255, 255, 255, 0.5)));
+            background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5));
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        &:hover {
+            &:before {
+                -webkit-animation: shape 0.7s linear;
+                animation: shape 0.7s linear;
+            }
+
+            img {
+                transform: scale(1.05);
+            }
+
+            &:last-of-type {
+                img {
+                    transform: none;
+                }
+
+            }
+        }
+
+        @include xs {
+            margin-left: 15px;
+            width: calc(50% - 7.5px);
+
+            #{$ltr} & {
+                margin-left: 0;
+                margin-right: 15px;
+            }
+
+            &:nth-of-type(3n) {
+                margin-left: 15px;
+
+                #{$ltr} & {
+                    margin-left: 0;
+                    margin-right: 15px;
+                }
+            }
+
+            &:nth-of-type(2n) {
+                margin-left: 0;
+
+                #{$ltr} & {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

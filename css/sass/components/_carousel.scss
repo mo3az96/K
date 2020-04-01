@@ -1,0 +1,241 @@
+.main-slider {
+    position: relative;
+    margin-top: 13px;
+
+    .owl-dots {
+        position: absolute;
+        bottom: 28px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include sm {
+            bottom: 10px;
+        }
+
+        .owl-dot {
+            background: rgba(#000, 0.4);
+            outline: none;
+            border: none;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 0 4.5px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.active {
+                background: #fff;
+                pointer-events: none;
+            }
+
+            &:hover {
+                background: #fff;
+            }
+        }
+    }
+
+    .owl-nav {
+        width: 0;
+        height: 0;
+
+        @include sm {
+            display: none;
+        }
+
+        button[class^=owl-] {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            outline: none;
+            border: none;
+            color: #fff;
+            font-size: 24.22px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.owl-next {
+                left: 29px;
+            }
+
+            &.owl-prev {
+                right: 29px;
+            }
+
+            &:hover {
+                color: $darkred;
+            }
+        }
+    }
+}
+
+.Product-slider {
+    .owl-nav {
+        width: 0;
+        height: 0;
+
+        @include sm {
+            display: none;
+        }
+
+        button[class^=owl-] {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            outline: none;
+            border: none;
+            color: #8f8f8f;
+            font-size: 18px;
+            @include transition(all 0.3s ease-in-out);
+
+
+            &.owl-next {
+                left: -40px;
+
+                @include md {
+                    left: -20px;
+                }
+            }
+
+            &.owl-prev {
+                right: -40px;
+
+                @include md {
+                    right: -20px;
+                }
+            }
+
+            &:hover {
+                color: $darkred;
+            }
+        }
+    }
+
+    .owl-dots {
+        @include sm {
+            display: flex;
+        }
+
+        display: none;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+
+        .owl-dot {
+            background: rgba(#000, 0.4);
+            outline: none;
+            border: none;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 0 4.5px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.active {
+                background: $darkred;
+                pointer-events: none;
+            }
+
+            &:hover {
+                background: $darkred;
+            }
+        }
+    }
+}
+
+.products-sec {
+    margin-top: 62px;
+
+    @include sm {
+        margin-top: 40px;
+    }
+
+    &:nth-of-type(2n) {
+        padding: 62px 0;
+        background-color: #f7f7f7;
+
+        @include sm {
+            margin-top: 30px;
+        }
+    }
+}
+
+.brand-slider {
+    margin-top: 94px;
+
+    @include sm {
+        margin-top: 50px;
+    }
+
+    .owl-nav {
+        width: 0;
+        height: 0;
+
+        @include sm {
+            display: none;
+        }
+
+        button[class^=owl-] {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            outline: none;
+            border: none;
+            color: #8f8f8f;
+            font-size: 18px;
+            @include transition(all 0.3s ease-in-out);
+
+
+            &.owl-next {
+                left: -40px;
+
+                @include md {
+                    left: -20px;
+                }
+            }
+
+            &.owl-prev {
+                right: -40px;
+
+                @include md {
+                    right: -20px;
+                }
+            }
+
+            &:hover {
+                color: $darkred;
+            }
+        }
+    }
+
+    .owl-dots {
+        @include sm {
+            display: flex;
+        }
+
+        display: none;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+
+        .owl-dot {
+            background: rgba(#000, 0.4);
+            outline: none;
+            border: none;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 0 4.5px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.active {
+                background: $darkred;
+                pointer-events: none;
+            }
+
+            &:hover {
+                background: $darkred;
+            }
+        }
+    }
+}

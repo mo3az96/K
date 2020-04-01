@@ -1,0 +1,84 @@
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 1 !important;
+    z-index: 99999999;
+    background-color: #fff;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include xs {
+            width: 115px;
+            width: 115px;
+        }
+    }
+
+    .loadingio-spinner-rolling-1s9ww3ks6un {
+        width: 250px;
+        height: 250px;
+        display: inline-block;
+
+        @include xs {
+            width: 125px;
+            height: 125px;
+        }
+
+        .ldio-q8bt5k8x5pi {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform: translateZ(0) scale(1);
+            backface-visibility: hidden;
+            transform-origin: 0 0;
+
+            div {
+                box-sizing: content-box;
+            }
+
+            div {
+                position: absolute;
+                width: 235px;
+                height: 235px;
+                border: 2px solid #ec5f44;
+                border-top-color: transparent;
+                border-radius: 50%;
+
+                @include xs {
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+
+            div {
+                animation: ldio-q8bt5k8x5pi 2s linear infinite;
+                top: 125px;
+                left: 125px;
+
+                @include xs {
+                    top: 62.5px;
+                    left: 62.5px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes ldio-q8bt5k8x5pi {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

@@ -1,0 +1,147 @@
+.footer {
+    padding-bottom: 20px;
+    padding-top: 58px;
+}
+
+.foot-header {
+    font-size: 16px;
+    color: $black;
+    font-family: bold;
+    margin-bottom: 17px;
+}
+
+.nav-foot-li {
+    margin-bottom: 9px;
+
+    &:last-of-type {
+        margin: 0;
+    }
+}
+
+.nav-foot-link {
+    text-transform: capitalize;
+    color: $black;
+    display: inline-block;
+    @include transition(all 0.3s ease-in-out);
+    font-size: 15px;
+    backface-visibility: hidden;
+
+
+    &:hover {
+        color: $darkred;
+        transform: translateX(-8px);
+    }
+
+    #{$ltr} & {
+
+        &:hover {
+            transform: translateX(8px);
+        }
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.social-link {
+    border-radius: 50%;
+    background-color: $green;
+    margin-left: 6px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #fff;
+    @include transition(all 0.3s ease-in-out);
+
+    #{$ltr} & {
+        margin-left: 0;
+        margin-right: 6px;
+    }
+
+    &:nth-of-type(1) {
+        background-color: #40b720;
+    }
+
+    &:nth-of-type(2) {
+        background-color: #3a5a97;
+    }
+
+    &:nth-of-type(3) {
+        background-color: #f7cb00;
+    }
+
+    &:nth-of-type(4) {
+        background-color: #5d5749;
+    }
+
+    &:last-of-type {
+        background-color: #2ac5f4;
+        margin-left: 0;
+        margin-right: 0;
+
+        #{$ltr} & {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    &:hover {
+        color: #fff;
+        background-color: $darkred;
+    }
+}
+
+.last-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 42px;
+}
+
+.copytight {
+    display: flex;
+    color: $black;
+    align-items: center;
+    font-size: 15px;
+    margin-bottom: 20px;
+
+    img {
+        margin: 0 5px;
+    }
+
+    .tasawk {
+        margin: 0 4px;
+
+        @include xs {
+            margin: 5px 0 0;
+
+        }
+    }
+
+    @include xs {
+        flex-direction: column;
+        justify-content: center;
+        order: 2;
+        margin-bottom: 15px;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+.social-cont {
+    @include xs {
+        text-align: center;
+        margin-top: 15px;
+
+        .social {
+            justify-content: center;
+        }
+    }
+}
